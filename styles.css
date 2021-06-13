@@ -76,7 +76,7 @@ footer i{
     visibility: hidden;
    }
    .content{
-     margin: 0%;
+     margin: 1% 1% 1% 1%;
    }
    .content button{
      margin-left: 35%;
@@ -88,5 +88,7 @@ footer i{
    }
    footer i{
      margin-left: 17%;
+     font-size: 40%;
    }
+   
  }
