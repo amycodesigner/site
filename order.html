@@ -11,13 +11,34 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Red+Hat+Text&display=swap" rel="stylesheet">
   </head>
   <body>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCyR3rEFw2_kki5fGEdS_1Qhmpnwwu3EsXpAqAEuRPOtnIDw/viewform?embedded=true" width="640" height="1913" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-<footer>
-  <a href="mailto:amycodesigner@gmail.com" class="text-dark" target="_blank"><i class="bi bi-envelope envelope"></i></a>
-  <a href="tel:+918308609732" class="text-dark" target="_blank"><i class="bi bi-telephone-fill"></i></a>
-  <a href="https://discord.com/channels/@me/codesigner#6116" class="text-dark" target="_blank"><i class="bi bi-discord"></i></a>
-  <a href="https://github.com/amycodesigner" class="text-dark" target="_blank"><i class="bi bi-github"></i></a>
-</footer>
+<form action=" https://sheetdb.io/api/v1/6ecvn3ixs9wzm" method="post">
+  <h1>Place your Order</h1>
+  <input name="data[name]" type="text" Placeholder="Full Name" required>
+  <br>
+  <input name="data[title]" type="text" Placeholder="Describe what you do." required>
+  <br>
+  <input name="data[email]" type="email" Placeholder="Email" required>
+  <br>
+  <input name="data[phone]" type="number" placeholder="Phone Number">
+  <br>
+  <input name="data[order]"  type="text" placeholder="Order Name (Refer Website)">
+  <br>
+  <button type="submit">Order Now</button>
+</form>
+<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      alert('success')
+    });
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
